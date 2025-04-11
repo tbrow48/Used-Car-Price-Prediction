@@ -124,9 +124,7 @@
         <form action="{{ url_for('predict')}}" method="post">
             <h2>Second-Hand Car Price Predictor</h2>
             <p style="font-size: 16px; font-weight: normal; text-align: left; color: #615a5a; margin-bottom: 30px;">
-                Hello, I’m Mehrdad. I have built, developed, and designed this price predictor using advanced Regression
-                Machine Learning algorithms. Please provide the following information to estimate the price of your
-                second-hand car.
+                This is a Used Car Price Predictor using CatBoostRegressor as the model.
             </p>
             <h3>Choose the Brand & Model:</h3>
             <div class="row">
@@ -175,7 +173,7 @@
                         }
                     </script>
                 </select>
-                <input id="engineSize" name="EngineSize" type="number" step="0.1" placeholder="Enter Engine Size" />
+                <input id="engineSize" name="EngineSize" type="number" step="1" placeholder="Enter Engine Size" />
                 <input id="mileage" name="Mileage" type="number" placeholder="Enter Mileage (KM)" />
             </div>
 
@@ -183,11 +181,8 @@
             <div class="row">
                 <select name="Doors" id="doors" required>
                     <option value="">-- Select Number of Doors --</option>
-                    <option value="1">1</option>
                     <option value="2">2</option>
-                    <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
                 </select>
                 <select name="OwnerCount" id="OwnerCount" required>
                     <option value="">-- Select Number of Owners --</option>
